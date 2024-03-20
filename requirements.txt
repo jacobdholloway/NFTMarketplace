@@ -1,0 +1,9 @@
+jupyter
+psycopg2-binary
+django
+django-bootstrap-v5
+crispy_bootstrap5
+django-localflavor
+django-countries
+Pillow
+eth-brownie

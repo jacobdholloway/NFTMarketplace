@@ -27,6 +27,7 @@
     source bin/activate
     ```
     If it says that it could not locate the file, you may not be in the correct directory. If successful, the name of the virtual environment will appear on the left of your terminal.
+    Or there is like somewhere that shows you are working in a virtual environment.
 
 ## Installing Dependencies
 
@@ -35,3 +36,6 @@
     ```bash
     pip3 install -r requirements.txt
     ```
+
+For this project I will not be adding the pythonvirtual environment. I will only add the requirements file inside of the github directory so that you can install what is needed but this is under the assumption that you do not want a python virtual environment in the folder. 
+
