@@ -1,6 +1,7 @@
 jupyter
 psycopg2-binary
 django
+django-admin
 django-bootstrap-v5
 crispy_bootstrap5
 django-localflavor

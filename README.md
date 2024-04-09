@@ -38,3 +38,26 @@
     ```
 
 For this project I will not be adding the pythonvirtual environment. I will only add the requirements file inside of the github directory so that you can install what is needed but this is under the assumption that you do not want a python virtual environment in the folder. 
+
+## Running Server
+
+- Included is now Django-Admin which allows you to locally run the server and make migrations for changes that you are making.
+
+There is now a folder called marketPlace that is housing the Django project so make sure you navigate to the project folder which should be in NFTMarketplace/marketPlace
+
+- to start it run:
+```bash
+python manage.py migrate
+
+```
+This will apply the server migrations and then you should get an okay.
+
+After that run 
+
+```bash
+
+python manage.py runserver
+```
+This starts a webserver at the default port 8000 and can be viewed by going to a web browser and typing
+
+'http://127.0.0.1:8000
