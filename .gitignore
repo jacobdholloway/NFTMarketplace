@@ -4,3 +4,7 @@
 */__pycache__/
 
 *.pyc
+.DS_Store
+.DS_Store
+marketPlace/.DS_Store
+marketPlace/marketPlace/.DS_Store
