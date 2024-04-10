@@ -1,10 +1,12 @@
-jupyter
-psycopg2-binary
-django
-django-admin
-django-bootstrap-v5
-crispy_bootstrap5
-django-localflavor
-django-countries
-Pillow
-eth-brownie
+jupyter # for data science
+psycopg2-binary # for postgresql
+django # for web framework
+django-admin # for admin panel
+django-bootstrap-v5 # for bootstrap 5
+crispy_bootstrap5 # for crispy forms
+django-localflavor # for phone number field
+django-countries # for country field
+Pillow # for image handling
+eth-brownie # for ethereum
+nodeenv  # for nodejs
+
