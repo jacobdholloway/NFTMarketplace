@@ -119,3 +119,8 @@ h1, h2, h3 {
     align-items: center;
     
   }
+
+  .custom-list {
+    list-style-type: none;
+    padding-left: 0;
+}
