@@ -35,9 +35,28 @@
 - Install the required packages:
     ```bash
     pip3 install -r requirements.txt
+    sudo npm install -g truffle
     ```
-
 For this project I will not be adding the pythonvirtual environment. I will only add the requirements file inside of the github directory so that you can install what is needed but this is under the assumption that you do not want a python virtual environment in the folder. 
+
+## Verification of Installed Dependencies 
+
+- After installing dependencies, one should verify that they installed correctly. This can be accomplished by checking the version numbers.
+
+  ```bash
+  jupyter --version
+  python -c "import psycopg2; print(psycopg2.__version__)"
+  python -m django --version
+  django-admin --version
+  python -c "import crispy_forms; print(crispy_forms.__version__)"
+  python -c "import django_countries; print(django_countries.__version__)"
+  python -c "import PIL; print(PIL.__version__)"
+  brownie --version
+  nodeenv --version
+  node -v
+  npm -v
+  truffle version
+  ```
 
 ## Running Server
 
