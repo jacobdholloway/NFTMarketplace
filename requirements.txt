@@ -8,5 +8,8 @@ django-localflavor # for phone number field
 django-countries # for country field
 Pillow # for image handling
 eth-brownie # for ethereum
-nodeenv  # for nodejs
+nodeenv  # for node.js
+nodejs # node.js
+npm # node package manager
+
 
