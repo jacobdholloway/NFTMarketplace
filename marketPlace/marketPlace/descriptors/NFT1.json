@@ -1,0 +1,27 @@
+{
+  "name": "Bald Bad Boy",
+  "description": "Informs you about the weather and will show you how cool his collection of mechanical keyboards are.",
+  "image": "http://localhost:8000/static/img/BaldBadBoyCard.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Cosmic Swirls"
+    },
+    {
+      "trait_type": "Stars",
+      "value": "9"
+    },
+    {
+      "trait_type": "Association",
+      "value": "Dark"
+    },
+    {
+      "trait_type": "ID",
+      "value": "06368038"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "1st"
+    }
+  ],
+}
