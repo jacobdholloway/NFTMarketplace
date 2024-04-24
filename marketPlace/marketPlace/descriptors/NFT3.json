@@ -1,0 +1,27 @@
+{
+  "name": "Coob",
+  "description"Born in the bayou this water based pokemon is tough as a crocodile and savory as his daddy's gumbo.",
+  "image": "http://localhost:8000/static/img/jacobPokemonCard.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Tiger Skin"
+    },
+    {
+      "trait_type": "Stars",
+      "value": "0"
+    },
+    {
+      "trait_type": "Association",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Resistance",
+      "value": "NFC Cards"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "1st"
+    }
+  ],
+}
