@@ -13,12 +13,10 @@ contract NFTMarketplace is ReentrancyGuard {
     }
 
     mapping(address => mapping(uint256 => Listing)) public listings; // NFT contract address to token ID to Listing
-    mapping(address => uint256) public pendingWithdrawals; // Funds available for withdrawal by sellers
 
     // Events
     event Listed(address indexed seller, address indexed nft, uint256 indexed tokenId, uint256 price);
     event Bought(address indexed buyer, address indexed nft, uint256 indexed tokenId, uint256 price);
-    event Withdrawn(address indexed seller, uint256 amount);
 
     // List an NFT
     function listNFT(address nft, uint256 tokenId, uint256 price) public {
@@ -36,8 +34,8 @@ contract NFTMarketplace is ReentrancyGuard {
         require(listing.isActive, "Listing is not active");
         require(msg.value == listing.price, "Incorrect value");
 
-        // Transfer funds to pending withdrawals for the seller
-        pendingWithdrawals[listing.seller] += msg.value;
+        // Transfer funds directly to the seller
+        payable(listing.seller).transfer(msg.value);
 
         // Transfer ownership of the NFT
         ERC721(nft).safeTransferFrom(listing.seller, msg.sender, tokenId);
@@ -46,16 +44,5 @@ contract NFTMarketplace is ReentrancyGuard {
         listings[nft][tokenId].isActive = false;
 
         emit Bought(msg.sender, nft, tokenId, listing.price);
-    }
-
-    // Withdraw earnings from sales
-    function withdraw() public {
-        uint256 amount = pendingWithdrawals[msg.sender];
-        require(amount > 0, "No funds to withdraw");
-
-        pendingWithdrawals[msg.sender] = 0;
-        payable(msg.sender).transfer(amount);
-
-        emit Withdrawn(msg.sender, amount);
     }
 }
