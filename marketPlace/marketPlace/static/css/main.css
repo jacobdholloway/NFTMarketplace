@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,9 +8,13 @@ body {
     padding: 0;
 }
 
-a {
-    color: #000000;
+a, .sidenav a {
+    color: #040404;
     text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
 }
 
 h1, h2, h3 {
@@ -17,20 +22,69 @@ h1, h2, h3 {
     margin-bottom: 20px;
 }
 
-.content-div {
-    margin: 1%;
+ul {
+    list-style-type: none; /* Removes bullet points */
+    text-align: center;
+    padding: 0; /* Removes default padding */
 }
 
-.brand-text {
-    padding-left: 0.5%;
+/* Flexbox Centering */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+/* Containers */
+.container, .text-center, .btn-group, .gallery-container, .nft-item {
+    height: 100vh; /* adjust this only in .container if different heights are needed */
+}
+
+.gallery-container, .nft-item {
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px; /* specific to gallery, can adjust or remove */
+    border: 2px solid #ddd;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+}
+
+/* Style individual li as buttons */
+.button li {
+    display: inline-block; /* Align horizontally */
+    margin: 10px; /* Spacing between buttons */
+}
+
+.button a {
+    display: inline-block;
+    padding: 10px 20px; /* Button-like appearance */
+    background-color: #1c8bec; /* Button background */
+    color: #040404; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #ddd; /* Border around the buttons */
+}
+
+.button a:hover {
+    background-color: #f65c4b; /* Change color on hover */
+    color: white; /* Text color change on hover */
+}
+
+/* Image Styling */
+img, .gallery-container img, .nft-item img {
+    object-fit: contain;
+    border-radius: 10px;
+    width: 400px; /* Adjust based on your preference */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Specific Element Adjustments */
 .navbar .dropdown-menu {
-    right: auto;
-    left: 0;
-    min-width: 100%; /* add this to make the dropdown menu adjust to the width of the dropdown button */
+    min-width: 100%; /* adjust to dropdown button width */
 }
-  
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -41,86 +95,33 @@ h1, h2, h3 {
 
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     color: #fff;
-  }
-
-
-  .account-container{
-    display: flex;
 }
 
-.sidenav{
-    color: rgb(0, 0, 0);
-    
-}
-
-.sidenav a {
-    
-    text-decoration: none;
-    font-size:25px;
-    color: #040404;
-    display:block;
+.custom-list {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #add8e6;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.sidenav a:hover{
-    color:#D11E35;
-}	
-
-
-
-.search-number{
-    margin-top: 2%;
+.hamburger-menu {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    gap: 4px;
+    padding: 10px;
 }
 
-.text-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
 }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-  }
-  
-
-  
-  .btn-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-  }
-  
-  .btn-group button {
-    margin: 0 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-  }
 
 .sidenav ul {
     list-style: none;
-  }
-
-.button {
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .custom-list {
-    list-style-type: none;
-    padding-left: 0;
 }

@@ -25,7 +25,8 @@ from .views import login, homepage, signup
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', views.login, name='login'),
-    path('home/', views.homepage, name='home'),
+    path("", views.login, name="login"),
+    path('login/', views.login, name='login'),
+    path('homepage/', views.homepage, name='home'),
     path('signup/', signup, name='signup'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

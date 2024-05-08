@@ -30,6 +30,13 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.card-header {
+    background-color: #2e60b7;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
 label {
     display: block;
     margin-bottom: 10px;
@@ -40,7 +47,7 @@ input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #0b0101;
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 20px;
@@ -78,4 +85,37 @@ input:focus {
     outline: none;
     border-color: #3da7fd;
     box-shadow: 0 0 5px rgba(62, 142, 65, 0.5);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #417991ce;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
 }

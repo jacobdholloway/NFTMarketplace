@@ -3,46 +3,8 @@
 <html>
 <head>
     <title>NFT Marketplace</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'marketPlace/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'marketPlace/css/main.css' %}">
-    <!-- Add an h1 title that says NFT Marketplace above the login window -->
-    <h1 style="text-align: center;">NFT Marketplace</h1>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        .container {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .card {
-            /* Adjust the background color here to make the card stand out */
-            background-color: #417991ce; /* Slightly off from the main page color */
-        }
-        .card-header, .card-body {
-            text-align: center;
-        }
-        .card-header {
-            /* Adjust the background color here to make the card stand out */
-            background-color: #2e60b7; /* Slightly off from the main page color */
-        }
-        .card-body {
-            padding: 20px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-control {
-            width: 100%;
-        }
-        .btn {
-            width: 100%;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
 </head>
 <body>
     <div class="container">
@@ -50,10 +12,10 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Login</h2>
+                        <strong style="font-size: 24px;">NFT Marketplace Login</strong>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form onsubmit="return handleLogin()">
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" class="form-control" id="username" placeholder="Enter username">
@@ -62,14 +24,26 @@
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" id="password" placeholder="Password">
                             </div>
-                            <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Login</button>
                         </form>
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button onclick="window.location.href='/signup'" type="button" class="btn btn-primary">Register</button>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
+    <script>
+    function handleLogin() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        
+        if (username && password) {
+            window.location.href = '/homepage';
+        } else {
+            alert('Please enter both username and password');
+        }
+        return false;
+    }
+    </script>
 </body>
 </html>
