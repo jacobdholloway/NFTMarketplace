@@ -17,3 +17,6 @@ def signup(request):
     else:
         form = UserProfile()
     return render(request, 'marketPlace/signup.html', {'form': form})
+
+def marketPlace(request):
+    return render(request, 'marketPlace/marketplace.html', {'page_title': 'Marketplace'})

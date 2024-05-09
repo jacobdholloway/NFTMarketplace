@@ -21,7 +21,7 @@ from django.urls import include
 from marketPlace import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import login, homepage, signup
+from .views import login, homepage, signup, marketPlace
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -29,4 +29,5 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('homepage/', views.homepage, name='home'),
     path('signup/', signup, name='signup'),
+    path('homepage/marketplace/', views.marketPlace, name='marketplace'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,25 +1,57 @@
-<!DOCTYPE html>
-<html>
+{% load static %}
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Overview</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/marketplace.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 </head>
 <body>
+    <div class="sidebar">
+        <h2>ETH Price</h2>
+        <p>$XXX</p> <!-- Display the current ETH price here -->
+        <h2>Wallet Balance</h2>
+        <p>$XXX</p> <!-- Display the user's wallet balance here -->
+
+
+        <h2>Gas Prices</h2>
+        <p id="standardGas">Standard: Loading...</p> <!-- Display the standard gas price here -->
+        <p id="fastGas">Fast: Loading...</p> <!-- Display the fast gas price here -->
+        <p id="instantGas">Instant: Loading...</p> <!-- Display the instant gas price here -->
+    </div>
     <div class="gallery-container" id="nftGallery">
         <div class="nft-item">
             <img src="{% static 'img/jacobPokemonCard.png' %}" alt="Jacob's Pokemon Card">
             <p>Jacob's Pokemon Card</p>
         </div>
         <div class="nft-item">
-            <img src="{% static 'img/BaldBadBoyCard.png' %}" alt="Bald Bad Boy Card">
-            <p>Bald Bad Boy Card</p>
-        </div>
-        <div class="nft-item">
             <img src="{% static 'img/PrayingCoobCard.png' %}" alt="Praying Coob Card">
             <p>Praying Coob Card</p>
         </div>
     </div>
+
+    <!-- JavaScript code for fetching and displaying gas prices -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to fetch gas prices
+            function fetchGasPrices() {
+                // Make an HTTP request to fetch gas prices from an API or Ethereum node
+                // Update the HTML content with fetched gas prices
+                $.getJSON('your_gas_price_api_url', function(data) {
+                    $('#standardGas').text('Standard: ' + data.standard + ' gwei');
+                    $('#fastGas').text('Fast: ' + data.fast + ' gwei');
+                    $('#instantGas').text('Instant: ' + data.instant + ' gwei');
+                });
+            }
+
+            // Initial fetch
+            fetchGasPrices();
+
+            // Polling mechanism to fetch gas prices at regular intervals (every 5 minutes)
+            setInterval(fetchGasPrices, 5 * 60 * 1000); // 5 minutes in milliseconds
+        });
+    </script>
 </body>
 </html>

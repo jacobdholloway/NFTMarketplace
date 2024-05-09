@@ -1,0 +1,59 @@
+/* marketplace.css */
+
+/* Center the gallery container */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+/* Style individual NFT items */
+.nft-item {
+    margin: 20px; /* Adjust as needed */
+    text-align: center;
+}
+
+/* Style NFT item images */
+.nft-item img {
+    width: 200px; /* Set a specific width */
+    height: 200px; /* Set a specific height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Style NFT item text */
+.nft-item p {
+    margin-top: 10px;
+    font-weight: bold; 
+}
+
+/* Optionally add more styling for hover effects or other visual enhancements */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 250px; /* Adjust as needed */
+    height: 100%;
+    background-color: #aed8f8;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sidebar p {
+    text-align: center;
+}
+
+.main-content {
+    margin-left: 270px; /* Make space for the sidebar */
+    padding: 20px;
+}
+
+.sidebar h2{
+    font-weight: bold;
+    text-align: center;
+}
