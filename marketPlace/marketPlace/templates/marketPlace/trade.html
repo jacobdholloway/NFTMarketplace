@@ -1,0 +1,21 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Overview</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+</head>
+<form action="/trade" method="post">
+    <label for="wallet">Public Wallet Address:</label>
+    <input type="text" id="wallet" name="wallet" required>
+
+    <label for="nfts">NFTs to Trade:</label>
+    <textarea id="nfts" name="nfts" rows="4" required></textarea>
+
+    <input type="submit" value="Trade">
+</form>

@@ -230,3 +230,12 @@ Switch to use a specific version of Node.js:
 
 nvm use 16  # Switches to Node.js version 16
 ```
+
+## View on chain
+
+You can start a python server that can work as a means of hosting the images.
+This can be accessed by running 
+
+```python
+
+python -m http.server *port number*

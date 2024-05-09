@@ -30,4 +30,7 @@ urlpatterns = [
     path('homepage/', views.homepage, name='home'),
     path('signup/', signup, name='signup'),
     path('homepage/marketplace/', views.marketPlace, name='marketplace'),
+    path('homepage/sell/', views.sell, name='sell'),
+    path('homepage/purchase/', views.purchase, name='purchase'),
+    path('homepage/trade', views.trade, name='trade'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

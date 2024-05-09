@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Overview</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
 </head>
 <body>
-    <h1 style="text-align: center;">Welcome to account overview!</h1>
-    <ul style="text-align: center; list-style-type: none;" class="button">
-        <li><a href="/homepage/purchase">PURCHASE</a></li>
-        <li><a href="/homepage/sell">SELL</a></li>
-        <li><a href="/homepage/marketplace">VIEW</a></li>
-    </ul>            
+    <div class="sidebar">
+        <h2>User Profile</h2>
+        <a href="/homepage/profile">View Profile</a>
+        <a href="/homepage/settings">Account Settings</a>
+    </div>
+    <div class="main-content">
+        <h1 style="text-align: center;">Welcome to account overview!</h1>
+        <ul style="text-align: center; list-style-type: none;" class="button">
+            <li><a href="/homepage/purchase">PURCHASE</a></li>
+            <li><a href="/homepage/sell">SELL</a></li>
+            <li><a href="/homepage/marketplace">VIEW</a></li>
+            <li><a href="/homepage/trade">TRADE</a></li>
+        </ul>
+    </div>
 </body>
 </html>
+
 
 

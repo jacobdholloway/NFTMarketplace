@@ -1,0 +1,27 @@
+{
+  "name": "Praying Coob",
+  "description": "Able to stretch farther than anyone should be able to at their given weight. Has IBS and every two turns of inaction will need to be removed temporarily to go to the bathroom.",
+  "image": "http://localhost:8000/static/img/BaldBadBoyCard.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": Enchanted Forest"
+    },
+    {
+      "trait_type": "Trees",
+      "value": "4"
+    },
+    {
+      "trait_type": "Association",
+      "value": "Earth"
+    },
+    {
+      "trait_type": "ID",
+      "value": "3/2"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "1st"
+    }
+  ],
+}

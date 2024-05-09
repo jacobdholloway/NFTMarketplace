@@ -1,4 +1,5 @@
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,24 +11,30 @@
 <body>
     <div class="sidebar">
         <h2>ETH Price</h2>
-        <p>$XXX</p> <!-- Display the current ETH price here -->
+        <p>$35,267</p> <!-- Display the current ETH price here -->
         <h2>Wallet Balance</h2>
-        <p>$XXX</p> <!-- Display the user's wallet balance here -->
+        <p>1000 ETH</p> <!-- Display the user's wallet balance here -->
 
 
         <h2>Gas Prices</h2>
-        <p id="standardGas">Standard: Loading...</p> <!-- Display the standard gas price here -->
-        <p id="fastGas">Fast: Loading...</p> <!-- Display the fast gas price here -->
-        <p id="instantGas">Instant: Loading...</p> <!-- Display the instant gas price here -->
+        <p id="standardGas">Standard: 2e10 Gwei</p> <!-- Display the standard gas price here -->
+        <p id="fastGas">Fast: 2.2e10 Gwei</p> <!-- Display the fast gas price here -->
+        <p id="instantGas">Instant: 3.5e10 Gwei</p> <!-- Display the instant gas price here -->
     </div>
     <div class="gallery-container" id="nftGallery">
         <div class="nft-item">
             <img src="{% static 'img/jacobPokemonCard.png' %}" alt="Jacob's Pokemon Card">
             <p>Jacob's Pokemon Card</p>
+            <p>Price: 0.5 ETH</p>
+            <p>Transaction Fee: 0.01 ETH</p>
+            <a href="http://localhost:9030/jacobPokemonCard.png">View on Blockchain</a>
         </div>
         <div class="nft-item">
             <img src="{% static 'img/PrayingCoobCard.png' %}" alt="Praying Coob Card">
             <p>Praying Coob Card</p>
+            <p>Price: 0.3 ETH</p>
+            <p>Transaction Fee: 0.01 ETH</p>
+            <a href="http://localhost:9030/PrayingCoobCard.png">View on Blockchain</a>
         </div>
     </div>
 
@@ -35,10 +42,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Function to fetch gas prices
             function fetchGasPrices() {
-                // Make an HTTP request to fetch gas prices from an API or Ethereum node
-                // Update the HTML content with fetched gas prices
                 $.getJSON('your_gas_price_api_url', function(data) {
                     $('#standardGas').text('Standard: ' + data.standard + ' gwei');
                     $('#fastGas').text('Fast: ' + data.fast + ' gwei');
@@ -46,10 +50,7 @@
                 });
             }
 
-            // Initial fetch
             fetchGasPrices();
-
-            // Polling mechanism to fetch gas prices at regular intervals (every 5 minutes)
             setInterval(fetchGasPrices, 5 * 60 * 1000); // 5 minutes in milliseconds
         });
     </script>

@@ -6,10 +6,13 @@ from .models import UserProfile
 
 class CustomUserCreationForm(UserCreationForm):
     address = forms.CharField(max_length=42, required=True, help_text="Enter your Ethereum address.")
-
+    username = forms.CharField(label='Username', max_length=100)
+    email = forms.EmailField(label='Email')
+    password = forms.CharField(label='Password', widget=forms.PasswordInput)
+    
     class Meta:
-        model = User
-        fields = ('address',)
+        model = UserProfile
+        fields = ('address','password1', 'password2',)
 
     def clean_username(self):
         username = self.cleaned_data['username']

@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 100%; /* Full width */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+}
+
+.main-content {
+    width: 100%; /* Full width */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
